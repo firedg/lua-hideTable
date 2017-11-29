@@ -9,6 +9,7 @@
 由于采用AES加密以及元表代理的形式处理数据 对于数据的读写性能并不优,若不是敏感数据不要用来加密
 
 ## 使用方式:
+```
 local cryptTbl = require("lib.crypt_tbl")
 local attrTbl = cryptTbl.createCtyptTbl()
 attrTbl.attack = 100                -- 加密
@@ -24,8 +25,8 @@ attrTbl.Func()                      -- 可用 但不会对函数进行加密
 
 local otherTbl = attrTbl -- 可用
 local otherCopyTbl = clone(attrTbl) -- 错误 拿不到正确数据
-local otherCopyTbl = copy(attrTbl) -- 错误 拿不到正确数据
-
+local otherCopyTbl = copy(attrTbl) -- 错误 拿不到正确数据``
+```
 ## 调试方法
 dump - ctyptTbl.__debugRawget(t, dump)
 pairs - ctyptTbl.__debugRawget(t, pairs)
