@@ -28,8 +28,10 @@ local otherCopyTbl = clone(attrTbl) -- 错误 拿不到正确数据
 local otherCopyTbl = copy(attrTbl) -- 错误 拿不到正确数据``
 ```
 ## 调试方法
+```
 dump - ctyptTbl.__debugRawget(t, dump)
 pairs - ctyptTbl.__debugRawget(t, pairs)
 for k, v in pairs(ctyptTbl.__debugRawget(t, pairs)) do
     print (k, v)
 end
+```
